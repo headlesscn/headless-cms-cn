@@ -10,8 +10,10 @@ class Template extends React.Component {
 
     return (
       <Container>
-        <Navigation />
-        {children}
+        <div class="above-footer">
+          <Navigation />
+          {children}
+        </div>
         <Footer />
       </Container>
     )

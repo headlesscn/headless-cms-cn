@@ -1,11 +1,11 @@
 {
-  "name": "contentful-starter-gatsby-blog",
-  "description": "Contentful Gatsby Starter Blog",
+  "name": "headless-cms-cn",
+  "description": "The Chinese site of the topic of Headless CMS",
   "private": true,
   "version": "0.0.1",
-  "author": "Contentful <opensource@contentful.com>",
+  "author": "Wiko <headlesscn@gmail.com>",
   "bugs": {
-    "url": "https://github.com/contentful/starter-gatsby-blog/issues"
+    "url": "https://github.com/headlesscn/headless-cms-cn/issues"
   },
   "dependencies": {
     "gatsby": "^2.23.9",
@@ -24,17 +24,17 @@
     "contentful-import": "^7.8.6",
     "netlify-cli": "^2.54.0"
   },
-  "homepage": "https://github.com/contentful/starter-gatsby-blog#readme",
+  "homepage": "https://github.com/headlesscn/headless-cms-cn#readme",
   "keywords": [
-    "gatsby",
-    "contentful",
-    "starter"
+    "headless",
+    "cms",
+    "chinese"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/contentful/starter-gatsby-blog.git"
+    "url": "git+https://github.com/headlesscn/headless-cms-cn.git"
   },
   "scripts": {
     "dev": "gatsby develop",

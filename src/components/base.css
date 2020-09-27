@@ -1,40 +1,129 @@
-@font-face {
-  font-family: "Avenir";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/avenir-400.woff2") format("woff2");
-  font-display: swap;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
+  font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
   font-size: 1em;
   line-height: 1.65;
-  color: #373F49;
-  background: #eee;
+  color: #191919;
+  background: #fff;
   margin: 0;
 }
+.above-footer {
+  min-height: calc(100vh - 84px);
+  padding-bottom: 32px;
+}
 
-img {
+img.block {
   display: block;
   width: 100%;
 }
 
-h1,
-h2,
-h3 {
-  font-size: 2em;
-  font-weight: normal;
-}
 
 a {
-  color: currentColor;
+  text-decoration: none;
+  color: #037095;
+}
+a:hover {
+  color: #014A63;
+}
+a.no-decoration {
+  text-decoration: none;
 }
 
 .wrapper {
   width: calc(100% - 10vmin);
   margin: 0 auto;
   padding: 5vmin 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }  
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }  
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }  
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }  
+}
+
+.site-header-container {
+  display: flex!important;
+  flex-wrap: wrap;
+  justify-content: space-between!important;
+}
+.site-header-container a {
+  color: #191919;
+}
+.site-header-logo-container {
+  margin: 16px 0 8px;
+}
+.site-header-logo-container h1 {
+  margin: 0;
+}
+
+
+
+
+.global-site-logo {
+  width: 48px;
+  height: 48px;
+  vertical-align: text-bottom;
+}
+.global-site-title-s1 {
+  margin-left: 4px;
+  font-size: 36px;
+  font-weight: 200;
+}
+.global-site-title-s2 {
+  margin-left: 2px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.global-site-title-s3 {
+  margin-left: 4px;
+  padding-bottom: 2px;
+  font-size: 21px;
+  font-weight: 600;
+}
+.global-site-title-s4 {
+  font-size: 21px;
+  font-weight: 400;
+}
+
+
+
+.global-site-footer {
+  height: 84px;
+  font-size: 0.875em;
+  background-color: #191919;
+  color: #fff;
+}
+.global-site-footer a {
+  color: #fff;
+}
+.global-site-footer-inner {
+  padding-top: 16px;
 }
 
 /**
@@ -48,13 +137,17 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 5vmin;
 }
+.article-list h3 {
+  margin: 8px 0 16px;
+  line-height: 120%;
+}
 
 /**
  *
  */
 .section-headline {
   padding: 0 0 0.4em 0;
-  margin: 0 0 5vmin 0;
+  margin: 16px 0 5vmin 0;
   border-bottom: 1px solid #ddd;
 }
 
