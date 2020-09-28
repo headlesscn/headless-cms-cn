@@ -11,11 +11,14 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteDescription = get(this, 'data.site.siteMetadata.description')
 
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet title={`${post.title} · ${siteTitle}`}>
+            <meta name="description" content={`${post.description.childMarkdownRemark.html} · ${siteDescription}`} />
+          </Helmet>
           <div className={heroStyles.hero}>
             <Img
               className={heroStyles.heroImage}
@@ -56,6 +59,11 @@ export const pageQuery = graphql`
     }
     contentfulBlogPost(slug: { eq: $slug }) {
       title
+      description {
+        childMarkdownRemark {
+          html
+        }
+      }
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {

@@ -26,7 +26,9 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "Headless CMS 无头中文站",
+    titleTemplate: "%s · Headless CMS 无头中文站",
     description: "面向中文用户，围绕 Headless CMS 主题，传播理念，助力中国企业提升内部信息资源管理效能。",
+    url: "https://www.headlesscms.cn",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
