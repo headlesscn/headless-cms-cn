@@ -5,7 +5,7 @@ import styles from './hero.module.css'
 
 export default ({ data }) => (
   <div className={styles.hero}>
-    <div class="container">
+    <div class="container container-w100">
       <Img
         className={styles.heroImage}
         alt={data.name}

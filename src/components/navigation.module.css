@@ -22,3 +22,10 @@
 .navigationItem a:hover {
   color: #000;
 }
+
+@media (max-width: 576px) {
+  .navigation {
+    height: auto;
+    margin-bottom: 8px;
+  }
+}
