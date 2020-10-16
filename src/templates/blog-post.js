@@ -31,6 +31,7 @@ class BlogPostTemplate extends React.Component {
             <p
               style={{
                 display: 'block',
+                color: '#999',
               }}
             >
               {post.publishDate}
@@ -64,7 +65,7 @@ export const pageQuery = graphql`
           html
         }
       }
-      publishDate(formatString: "MMMM Do, YYYY")
+      publishDate(formatString: "YYYY-MM-DD")
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
