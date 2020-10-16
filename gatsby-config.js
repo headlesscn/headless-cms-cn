@@ -30,7 +30,7 @@ module.exports = {
     description: "面向中文用户，围绕 Headless CMS 主题，传播理念，助力中国企业提升内部信息资源管理效能。",
     url: "https://www.headlesscms.cn",
   },
-  pathPrefix: "/gatsby-contentful-starter",
+  pathPrefix: "/",
   plugins: [
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
@@ -39,6 +39,35 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-180716437-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+        // Enables Google Optimize using your container Id
+        optimizeId: "",
+        // Enables Google Optimize Experiment ID
+        experimentId: "",
+        // Set Variation ID. 0 for original 1,2,3....
+        variationId: "",
+        // Defers execution of google analytics script after page load
+        defer: false,
+        // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "headlesscms.cn",
+      },
     },
   ],
 };
